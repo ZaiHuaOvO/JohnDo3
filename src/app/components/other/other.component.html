@@ -1,4 +1,26 @@
-<div class="other card">
+<div @SlowUp class="other card">
     <h5 nz-typography>最新自言自语</h5>
     <p nz-typography>{{data}}</p>
+</div>
+<div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
+    <h5 nz-typography>精选文章</h5>
+    <nz-list>
+        @for (item of blogStarList; track item) {
+        <nz-list-item>
+            <span nz-typography>{{item.title}}</span>
+            <span nz-typography nzType="secondary">{{item.tag}}</span>
+        </nz-list-item>
+        }
+    </nz-list>
+</div>
+<div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
+    <h5 nz-typography>精选留言</h5>
+    <nz-list>
+        @for (item of msgStarList; track item) {
+        <nz-list-item>
+            <span nz-typography>{{item.content}}</span>
+            <span nz-typography nzType="secondary">{{item.name}}</span>
+        </nz-list-item>
+        }
+    </nz-list>
 </div>

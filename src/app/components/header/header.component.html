@@ -1,4 +1,4 @@
-<div class="header card" [class.hidden]="isHidden" nz-flex nzJustify="start" nzAlign="center" nzGap="middle">
+<div @QuickDown class="header card" [class.hidden]="isHidden" nz-flex nzJustify="start" nzAlign="center" nzGap="middle">
     <span nz-typography>JohnDo3的BLOG</span>
     <button class="menu_button" *ngFor="let menu of menuList">
         {{menu.title}}

@@ -1,4 +1,4 @@
-<div class="me card" nz-flex nzJustify="center">
+<div @SlowUp class="me card" nz-flex nzJustify="center">
     <div class="info" nz-flex nzJustify="start" nzAlign="center" nzGap="middle" [nzVertical]=" true">
         <nz-avatar [nzSize]="128" nzSrc="assets/web/logo.jpg" nzShape="circle"></nz-avatar>
         <h4 nz-typography>John_Do3</h4>
@@ -32,4 +32,26 @@
             </div>
         </div>
     </div>
+</div>
+<div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
+    <h5 nz-typography>文章分类</h5>
+    <nz-list>
+        @for (item of blogTagList; track item) {
+        <nz-list-item>
+            <span nz-typography>{{item.type}}</span>
+            {{ item.value }}篇
+        </nz-list-item>
+        }
+    </nz-list>
+</div>
+<div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
+    <h5 nz-typography>相册分类</h5>
+    <nz-list>
+        @for (item of picTagList; track item) {
+        <nz-list-item>
+            <span nz-typography>{{item.type}}</span>
+            {{ item.value }}张
+        </nz-list-item>
+        }
+    </nz-list>
 </div>

@@ -4,6 +4,8 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { TitleComponent } from '../../components/title/title.component';
+import { QuickUp } from '../../common_ui/animations/animation';
 
 @Component({
   selector: 'doe-blog',
@@ -15,9 +17,11 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
     NzDividerModule,
     DatePipe,
     NzIconModule,
+    TitleComponent,
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
+  animations: [QuickUp],
 })
 export class BlogComponent {
   data = [

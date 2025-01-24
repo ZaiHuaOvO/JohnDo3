@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { QuickDown } from '../../common_ui/animations/animation';
 
 @Component({
   selector: 'doe-header',
@@ -17,6 +18,7 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
+  animations: [QuickDown],
 })
 export class HeaderComponent {
   isHidden = false; // 控制隐藏状态

@@ -1,17 +1,5 @@
-.blog {
-    width: 100%;
-    padding: 24px;
-    background-color: #fff;
-    margin-bottom: 24px;
-    cursor: pointer;
-}
-
-h1 {
-    font-weight: 400;
-    font-size: 30px;
-}
-
 .title {
+    font-size: 32px;
     background-image: linear-gradient(to right,
             #54b3d6,
             #54b3d6 50%,

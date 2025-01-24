@@ -3,6 +3,7 @@ nz-header {
     width: 100%;
     height: 48px;
     /* 导航永远在上层 */
+    z-index: 999;
     background-color: #EEEEEE;
     border-radius: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;

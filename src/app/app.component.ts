@@ -6,6 +6,7 @@ import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { MeComponent } from './components/me/me.component';
 import { OtherComponent } from './components/other/other.component';
+import { QuickDown, QuickUp, SlowUp } from './common_ui/animations/animation';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { OtherComponent } from './components/other/other.component';
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  animations: [QuickUp, SlowUp, QuickDown],
 })
 export class AppComponent {
   title = 'JohnDo3';

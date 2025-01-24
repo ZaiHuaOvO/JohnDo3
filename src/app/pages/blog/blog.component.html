@@ -1,5 +1,6 @@
-<div class="blog card" nz-flex [nzVertical]="true" nzGap="small" *ngFor="let i of data">
-    <h1 nz-typography>{{i.title}}</h1>
+<div @QuickUp class="blog card" nz-flex [nzVertical]="true" nzGap="small" *ngFor="let i of data">
+    <!-- <span nz-typography class="title">{{i.title}}</span> -->
+    <doe-title [title]="i.title"></doe-title>
     <p nz-typography nzType="secondary">{{i.content}}</p>
     <div nz-flex nzJustify="space-between" nzAlign="center">
         <div nz-flex nzAlign="center" nzGap="small">
