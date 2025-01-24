@@ -1,0 +1,38 @@
+.header {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 0;
+}
+
+.hidden {}
+
+/* CSS */
+.menu_button {
+    background-color: #fff;
+    padding: 1px;
+    border: none;
+    cursor: pointer;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    height: 36px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+}
+
+.menu_button:hover {
+    background-color: #f8f9fa;
+    color: #3c4043;
+}
+
+.menu_button:focus {
+    border-color: #4285f4;
+    outline: none;
+}

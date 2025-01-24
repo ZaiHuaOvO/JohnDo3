@@ -1,0 +1,17 @@
+<div class="blog card" nz-flex [nzVertical]="true" nzGap="small" *ngFor="let i of data">
+    <h1 nz-typography>{{i.title}}</h1>
+    <p nz-typography nzType="secondary">{{i.content}}</p>
+    <div nz-flex nzJustify="space-between" nzAlign="center">
+        <div nz-flex nzAlign="center" nzGap="small">
+            <span nz-typography nzType="secondary">{{i.date | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+            <span nz-typography nzType="secondary">|</span>
+            <span nz-typography nzType="secondary">{{i.tag}}</span>
+        </div>
+        <div nz-flex nzAlign="center" nzGap="small">
+            <span nz-typography nzType="secondary"><span nz-icon nzType="eye" nzTheme="outline"></span>
+                {{i.view}}</span>
+            <span nz-typography nzType="secondary"><span nz-icon nzType="heart" nzTheme="outline"></span>
+                {{i.heart}}</span>
+        </div>
+    </div>
+</div>
