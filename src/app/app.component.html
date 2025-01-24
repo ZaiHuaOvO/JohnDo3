@@ -3,20 +3,8 @@
     <doe-header></doe-header>
   </nz-header>
   <nz-content>
-    <div class="content" nz-flex nzJustify="space-around" nzAlign="start">
-      <div class="me">
-        <nz-affix [nzOffsetTop]="72">
-          <doe-me></doe-me>
-        </nz-affix>
-      </div>
-      <div class="basic">
-        <router-outlet></router-outlet>
-      </div>
-      <div class="other">
-        <nz-affix [nzOffsetTop]="72">
-          <doe-other></doe-other>
-        </nz-affix>
-      </div>
+    <div class="content">
+      <router-outlet></router-outlet>
     </div>
   </nz-content>
   <nz-footer>

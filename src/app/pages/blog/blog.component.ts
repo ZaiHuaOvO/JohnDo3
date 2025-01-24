@@ -6,6 +6,9 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { TitleComponent } from '../../components/title/title.component';
 import { QuickUp } from '../../common_ui/animations/animation';
+import { NzAffixModule } from 'ng-zorro-antd/affix';
+import { MeComponent } from '../../components/me/me.component';
+import { OtherComponent } from '../../components/other/other.component';
 
 @Component({
   selector: 'doe-blog',
@@ -18,6 +21,9 @@ import { QuickUp } from '../../common_ui/animations/animation';
     DatePipe,
     NzIconModule,
     TitleComponent,
+    NzAffixModule,
+    MeComponent,
+    OtherComponent,
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',

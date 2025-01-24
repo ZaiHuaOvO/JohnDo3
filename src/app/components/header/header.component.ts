@@ -50,7 +50,7 @@ export class HeaderComponent {
     {
       title: '相册',
       icon: 'picture',
-      url: '/blog',
+      url: '/picture',
       child: [],
     },
     {

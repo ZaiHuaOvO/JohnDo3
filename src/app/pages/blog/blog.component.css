@@ -6,6 +6,24 @@
     cursor: pointer;
 }
 
+.content {}
+
+.basic {
+    width: 50%;
+    min-height: 200vh;
+    background-color: #EEEEEE;
+}
+
+.me {
+    width: 22%;
+    min-height: 40vh;
+}
+
+.other {
+    width: 22%;
+    min-height: 30vh;
+}
+
 h1 {
     font-weight: 400;
     font-size: 30px;

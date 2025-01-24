@@ -1,0 +1,7 @@
+<nz-row [nzGutter]="4">
+    <nz-col *ngFor="let image of images; let i = index" [nzSpan]="12">
+        <div class="tiles">
+            <doe-img [IMG]="image" [@QuickUp]="{ value: '', params: { delay: i * 100 + 'ms' } }"></doe-img>
+        </div>
+    </nz-col>
+</nz-row>
