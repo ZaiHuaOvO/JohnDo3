@@ -1,5 +1,5 @@
 <div @SlowUp class="me card" nz-flex nzJustify="center">
-    <div class="info" nz-flex nzJustify="start" nzAlign="center" nzGap="middle" [nzVertical]=" true">
+    <div class="info" nz-flex nzJustify="start" nzAlign="center" nzGap="middle" [nzVertical]="true">
         <nz-avatar [nzSize]="128" nzSrc="assets/web/logo.jpg" nzShape="circle"></nz-avatar>
         <h4 nz-typography>John_Do3</h4>
         <span nz-typography>这是一份自我介绍，有关John_Do3的一些信息和介绍</span>
@@ -20,38 +20,22 @@
             </span>
         </div>
 
-        <div class="num" nzGap="0" nz-flex nzJustify="space-around" nzAlign="center">
+        <!-- <div class="num" nzGap="0" nz-flex nzJustify="space-around" nzAlign="center">
             <div nz-flex [nzVertical]="true" nzAlign="center">
                 <h5 nz-typography>文章</h5>
-                <nz-tag nzColor="blue">16篇</nz-tag>
+                <nz-tag nzColor="blue">{{data.blogCount}}篇</nz-tag>
             </div>
 
             <div nz-flex [nzVertical]="true" nzAlign="center">
                 <h5 nz-typography>相册</h5>
-                <nz-tag nzColor="pink">12张</nz-tag>
+                <nz-tag nzColor="pink">{{data.picCount}}张</nz-tag>
             </div>
+        </div> -->
+        <nz-divider></nz-divider>
+        <div nz-flex [nzVertical]="true">
+            <span>备案号123</span>
+            <span>备案号234</span>
+            <span>备案号345</span>
         </div>
     </div>
-</div>
-<div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
-    <h5 nz-typography>文章分类</h5>
-    <nz-list>
-        @for (item of blogTagList; track item) {
-        <nz-list-item>
-            <span nz-typography>{{item.type}}</span>
-            {{ item.value }}篇
-        </nz-list-item>
-        }
-    </nz-list>
-</div>
-<div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
-    <h5 nz-typography>相册分类</h5>
-    <nz-list>
-        @for (item of picTagList; track item) {
-        <nz-list-item>
-            <span nz-typography>{{item.type}}</span>
-            {{ item.value }}张
-        </nz-list-item>
-        }
-    </nz-list>
 </div>

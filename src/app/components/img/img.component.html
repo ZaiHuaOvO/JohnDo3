@@ -1,8 +1,8 @@
-<a class="tile" href="#">
-    <img class="card" nz-image [nzSrc]="IMG.url" alt="" />
+<a class="tile" (click)="preview()">
+    <img class="card" nz-image [nzSrc]="IMG.water_url" alt="" nzDisablePreview />
     <div class="details">
         <span class="title">{{IMG.title}}</span>
-        <span class="info">{{IMG.content}}</span>
-        <span class="info">{{IMG.date}}</span>
+        <span class="content">{{IMG.content}}</span>
+        <span class="info">{{IMG.date | date:'yyyy-MM-dd'}}</span>
     </div>
 </a>

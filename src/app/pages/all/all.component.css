@@ -1,0 +1,19 @@
+.content {}
+
+.all {
+    width: 60%;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.blog_title {
+    cursor: pointer;
+}
+
+.blog_title:hover {
+    color: #2F9BFF;
+}
+
+.blog_time {
+    min-width: 70px;
+}

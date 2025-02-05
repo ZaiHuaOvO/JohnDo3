@@ -1,0 +1,22 @@
+<div class="content" nz-flex nzJustify="center">
+    <div class="all card" @QuickUp>
+        <h1 nz-typography>归档</h1>
+        <nz-divider></nz-divider>
+        <ng-container *ngFor="let item of data">
+            <div class="blog">
+                <h2 nz-typography>{{item.year}}年</h2>
+                <nz-timeline>
+                    <nz-timeline-item *ngFor="let blog of item.data">
+                        <div nz-flex nzGap="middle">
+                            <span nz-typography class="blog_time" nzType="secondary">{{ blog.date |
+                                date:'yyyy-MM-dd' }}</span>
+                            <span *ngIf="blog.type =='blog'" class="blog_title">发布文章：{{blog.title}}</span>
+                            <span *ngIf="blog.type =='pic'" class="blog_title"
+                                (click)="preview(blog)">上传照片：{{blog.title}}</span>
+                        </div>
+                    </nz-timeline-item>
+                </nz-timeline>
+            </div>
+        </ng-container>
+    </div>
+</div>

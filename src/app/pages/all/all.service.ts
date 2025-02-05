@@ -6,11 +6,11 @@ import { HttpService } from '../../services/http.service';
 @Injectable({
   providedIn: 'root',
 })
-export class BlogService {
+export class AllService {
   constructor(private http: HttpService) { }
 
-  getBlogs(data?: any): Observable<object> {
-    return this.http.get(API.BLOG, data);
+  getAlls(data?: any): Observable<object> {
+    return this.http.get(API.ALL, data);
   }
 
   getBlogDetail(Id: string): Observable<object> {

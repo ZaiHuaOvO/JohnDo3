@@ -54,9 +54,15 @@ export class HeaderComponent {
       child: [],
     },
     {
+      title: '归档',
+      icon: 'all',
+      url: '/all',
+      child: [],
+    },
+    {
       title: '关于',
       icon: 'user',
-      url: '/blog',
+      url: '/error',
       child: [],
     },
   ];

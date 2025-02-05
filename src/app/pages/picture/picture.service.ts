@@ -7,17 +7,13 @@ import { HttpService } from '../../services/http.service';
   providedIn: 'root',
 })
 export class PictureService {
-  constructor(private http: HttpService) {}
+  constructor(private http: HttpService) { }
 
-  getBlogs(data?: any): Observable<object> {
-    return this.http.get(API.BLOG, data);
+  getPicList(data?: any): Observable<object> {
+    return this.http.get(API.PIC, data);
   }
 
   getBlogDetail(Id: string): Observable<object> {
     return this.http.get(API.BLOG + `/${Id}`);
-  }
-
-  getTags(): Observable<object> {
-    return this.http.get(API.TAG);
   }
 }

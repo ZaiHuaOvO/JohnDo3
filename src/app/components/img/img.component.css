@@ -41,6 +41,8 @@
     max-width: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .tile .details {
@@ -91,11 +93,15 @@
 }
 
 .tile:hover .details .title {
+    transition-delay: 0.1s;
+}
+
+.tile:hover .details .content {
     transition-delay: 0.15s;
 }
 
 .tile:hover .details .info {
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
 }
 
 .image-container {

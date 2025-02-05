@@ -1,25 +1,29 @@
 <div @SlowUp class="other card">
     <h5 nz-typography>最新自言自语</h5>
-    <p nz-typography>{{data}}</p>
+    <p nz-typography>1234</p>
 </div>
 <div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
-    <h5 nz-typography>精选文章</h5>
+    <h5 nz-typography nz-flex nzAlign="center" nzGap="small">文章
+        <span class="count">{{data.blogCount}}</span> 篇
+    </h5>
     <nz-list>
-        @for (item of blogStarList; track item) {
+        @for (item of data.blogTagList; track item) {
         <nz-list-item>
-            <span nz-typography>{{item.title}}</span>
-            <span nz-typography nzType="secondary">{{item.tag}}</span>
+            <span nz-typography>{{item.tag}}</span>
+            <nz-tag>{{ item.tagCount }}</nz-tag>
         </nz-list-item>
         }
     </nz-list>
 </div>
 <div @SlowUp class="tag card" nz-flex nzJustify="center" [nzVertical]=" true">
-    <h5 nz-typography>精选留言</h5>
+    <h5 nz-typography nz-flex nzAlign="center" nzGap="small">相册
+        <span class="count">{{data.picCount}}</span> 张
+    </h5>
     <nz-list>
-        @for (item of msgStarList; track item) {
+        @for (item of data.picTagList; track item) {
         <nz-list-item>
-            <span nz-typography>{{item.content}}</span>
-            <span nz-typography nzType="secondary">{{item.name}}</span>
+            <span nz-typography>{{item.tag}}</span>
+            <nz-tag>{{ item.tagCount }}</nz-tag>
         </nz-list-item>
         }
     </nz-list>

@@ -6,7 +6,7 @@ import { HttpService } from '../../services/http.service';
 @Injectable({
   providedIn: 'root',
 })
-export class BlogService {
+export class AboutService {
   constructor(private http: HttpService) { }
 
   getBlogs(data?: any): Observable<object> {
