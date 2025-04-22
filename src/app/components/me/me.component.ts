@@ -8,6 +8,7 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { SlowUp } from '../../common_ui/animations/animation';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
 
 @Component({
   selector: 'doe-me',
@@ -20,7 +21,8 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
     NzIconModule,
     NzTagModule,
     NzListModule,
-    NzDividerModule
+    NzDividerModule,
+    NzPopoverModule
   ],
   templateUrl: './me.component.html',
   styleUrl: './me.component.css',
@@ -33,4 +35,8 @@ export class MeComponent {
     blogTagList: [],
     picTagList: []
   };
+
+  bilibili(): void {
+    window.open('https://space.bilibili.com/10070281', '_blank');
+  }
 }

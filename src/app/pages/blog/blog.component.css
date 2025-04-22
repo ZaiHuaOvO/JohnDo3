@@ -4,6 +4,12 @@
     background-color: #fff;
     margin-bottom: 24px;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+.blog:hover {
+    transform: translateY(-8px);
 }
 
 .content {}

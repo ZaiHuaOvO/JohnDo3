@@ -62,8 +62,12 @@ export class HeaderComponent {
     {
       title: '关于',
       icon: 'user',
-      url: '/error',
+      url: '/about',
       child: [],
     },
   ];
+
+  go(): void {
+    window.open('/blog', '_self')
+  }
 }

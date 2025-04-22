@@ -5,23 +5,25 @@
         </nz-affix>
     </div>
     <div class="basic" nz-flex nzJustify="space-around" nzAlign="start" [nzVertical]="true">
-        <div @QuickUp class="blog card" nz-flex [nzVertical]="true" nzAlign="start" nzGap="small"
-            *ngFor="let i of data">
-            <!-- <span nz-typography class="title">{{i.title}}</span> -->
-            <doe-title [title]="i.title"></doe-title>
-            <p nz-typography nzType="secondary">{{i.content}}</p>
-            <div style="width: 100%;" nz-flex nzJustify="space-between" nzAlign="center">
-                <div nz-flex nzAlign="center" nzGap="small">
-                    <span nz-typography nzType="secondary">{{i.date | date:'yyyy-MM-dd HH:mm:ss'}}</span>
-                    <span nz-typography nzType="secondary">|</span>
-                    <span nz-typography nzType="secondary">{{i.tag}}</span>
-                </div>
-                <div nz-flex nzAlign="center" nzGap="small">
-                    <span nz-typography nzType="secondary"><span nz-icon nzType="eye" nzTheme="outline"></span>
-                        {{i.view}}</span>
+        <ng-container *ngFor="let i of data">
+            <div @QuickUp class="blog card" nz-flex [nzVertical]="true" nzAlign="start" nzGap="small"
+                (click)="blogDetail(i)">
+                <!-- <span nz-typography class="title">{{i.title}}</span> -->
+                <doe-title [title]="i.title"></doe-title>
+                <p nz-typography nzType="secondary">{{i.content}}</p>
+                <div style="width: 100%;" nz-flex nzJustify="space-between" nzAlign="center">
+                    <div nz-flex nzAlign="center" nzGap="small">
+                        <span nz-typography nzType="secondary">{{i.date | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+                        <span nz-typography nzType="secondary">|</span>
+                        <span nz-typography nzType="secondary">{{i.tag}}</span>
+                    </div>
+                    <div nz-flex nzAlign="center" nzGap="small">
+                        <span nz-typography nzType="secondary"><span nz-icon nzType="eye" nzTheme="outline"></span>
+                            {{i.view}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </ng-container>
     </div>
     <div class="other">
         <nz-affix [nzOffsetTop]="72">

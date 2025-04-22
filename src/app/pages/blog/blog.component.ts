@@ -10,6 +10,7 @@ import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { MeComponent } from '../../components/me/me.component';
 import { OtherComponent } from '../../components/other/other.component';
 import { BlogService } from './blog.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'doe-blog',
@@ -37,6 +38,7 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private blogService: BlogService,
+    private router: Router
   ) {
   }
 
@@ -55,5 +57,9 @@ export class BlogComponent implements OnInit {
     this.blogService.getWebInfo().subscribe((res: any) => {
       this.webInfo = res['data'];
     });
+  }
+
+  blogDetail(i: any): void {
+    this.router.navigate([`/blog/${i.id}`])
   }
 }

@@ -10,6 +10,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { provideNzIcons } from './icons-provider';
+import { MarkdownModule } from 'ngx-markdown';
 
 const icons: any[] = Object.values(AllIcons);
 
@@ -22,7 +23,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideNzIcons(icons),
     provideNzI18n(zh_CN),
-    importProvidersFrom(FormsModule),
+    importProvidersFrom(FormsModule, MarkdownModule.forRoot()),
     provideAnimationsAsync(),
     provideHttpClient(withFetch()),
   ],

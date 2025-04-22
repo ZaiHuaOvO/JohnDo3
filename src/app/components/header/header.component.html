@@ -1,5 +1,5 @@
 <div @QuickDown class="header card" [class.hidden]="isHidden" nz-flex nzJustify="start" nzAlign="center" nzGap="middle">
-    <span nz-typography>JohnDo3的BLOG</span>
+    <img style="height: 60%;cursor: pointer;" (click)="go()" src="assets/web/JohnDo3.png">
     <button class="menu_button" *ngFor="let menu of menuList" [routerLink]="menu.url">
         {{menu.title}}
     </button>

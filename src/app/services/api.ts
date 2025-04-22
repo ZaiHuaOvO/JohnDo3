@@ -3,7 +3,7 @@ export const API = {
   BASE_URL: 'http://localhost:8000',
 
   // 正式区
-  // BASE_URL: 'https://api.flowersink.com',
+  // BASE_URL: 'https://api.johndo3.com',
 
   // 博客
   BLOG: '/blog',
